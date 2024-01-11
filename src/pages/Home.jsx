@@ -8,6 +8,7 @@ export const Home = () => {
     <div className={css.container}>
       <img className={css.img} src={image1} alt="img" />
       <img className={css.img} src={image2} alt="img" />
+      <img className={css.img} src={image2} alt="img" />
     </div>
   );
 }
