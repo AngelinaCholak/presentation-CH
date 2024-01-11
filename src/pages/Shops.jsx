@@ -36,6 +36,7 @@ const NextArrow = ({ onClick }) => (
 
 export const Shops = () => {
   const [loading, setLoading] = useState(true);
+  // eslint-disable-next-line no-unused-vars
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
