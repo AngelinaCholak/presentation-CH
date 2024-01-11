@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -50,26 +50,28 @@ export const Shops = () => {
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
-
-  const images = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
-    image11,
-    image12,
-    image13,
-    image14,
-    image15,
-    image16,
-    image17,
-  ];
+  const images = useMemo(
+    () => [
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image6,
+      image7,
+      image8,
+      image9,
+      image10,
+      image11,
+      image12,
+      image13,
+      image14,
+      image15,
+      image16,
+      image17,
+    ],
+    []
+  );
 
   useEffect(() => {
     const loadImage = () => {
@@ -91,7 +93,6 @@ export const Shops = () => {
 
   return (
     <div className={css.container}>
-      <h2></h2>
       <div className={css.sliderContainer}>
         <div className={css.sliderContainerInner}>
           {loading ? (
