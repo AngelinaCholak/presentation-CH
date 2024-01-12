@@ -1,5 +1,5 @@
 .container {
-  position: fixed; /* Змінено на fixed */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -10,7 +10,7 @@
   background: linear-gradient(to right, rgba(210, 83, 230, 0.9), rgba(146, 30, 170, 0.9), rgba(25, 0, 29, 0.9));
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(20px);
-  z-index: 1000; /* При необхідності додайте z-index для правильного відображення */
+  z-index: 1000; 
 }
 
 
@@ -75,7 +75,7 @@ background: white;
   /* position: fixed; */
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .contacts {
     margin-left: 0; 
   }

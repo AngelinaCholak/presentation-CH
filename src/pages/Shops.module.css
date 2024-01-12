@@ -1,12 +1,7 @@
-/* .sliderImage {
-  width: 100%;
-  height: auto;
-} */
 .container {
  max-width: 1000px; 
-margin: 0 auto;
+ margin: 0 auto;
 }
-
 
 .sliderImage {
   width: 100%;
@@ -14,12 +9,6 @@ margin: 0 auto;
   object-fit: cover; 
 
 }
-
-/* .sliderImage:hover {
-  transform: scale(2.1);
-  color: #ff6600;
-} */
-
 .sliderContainer {
   border: 6px solid;
   border-image-slice: 1;
@@ -56,4 +45,15 @@ margin: 0 auto;
   justify-content: center;
   align-items: center;
   font-size: 54px; 
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%; 
+    padding: 30px; 
+  }
+  .sliderContainer {
+
+  margin-top: 100px;
+}
 }
