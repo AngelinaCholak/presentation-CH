@@ -19,10 +19,13 @@
   list-style: none;
   text-decoration: none;
   display: flex;
+
+padding: 10px;
+    white-space: nowrap;
 }
 
 .container nav ul li {
-  /* margin-right: 10px; */
+  margin-right: 10px;
 }
 
 .headerLink {
