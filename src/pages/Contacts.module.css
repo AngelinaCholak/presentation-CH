@@ -11,3 +11,13 @@
 .img:hover {
   transform: scale(1.1); 
 }
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%; 
+    padding: 30px; 
+  }
+  .img {
+
+  /* margin-top: 100px; */
+}
+}

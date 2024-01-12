@@ -3,6 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import css from './Layoyt.module.css';
 
 const Layoyt = () => {
+  //  const isMobile = window.innerWidth <= 768;
   return (
     <div className={css.filmsTrending}>
       <header className={css.container}>
@@ -11,7 +12,8 @@ const Layoyt = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? css.active : css.headerLink
+                  isActive ? css.active : css.headerLink 
+              
                 }
                 to="/"
               >

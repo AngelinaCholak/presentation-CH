@@ -22,7 +22,7 @@
 }
 
 .container nav ul li {
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 .headerLink {
@@ -68,15 +68,25 @@ background: white;
   background: linear-gradient(to right, rgba(245, 232, 224, 0.9), rgba(243, 162, 115, 0.9), rgba(248, 120, 46, 0.9));
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
-.contacts{
+/* .contacts{
   margin-left: 900px;
   color: white;
   cursor: pointer;
-  /* position: fixed; */
-}
+  
+} */
 
 @media screen and (max-width: 768px) {
   .contacts {
     margin-left: 0; 
+  }
+ .mobile .active {
+    background-color: transparent; 
+    color: inherit;
+    font-weight: inherit;
+    padding: inherit;
+    border-radius: inherit;
+    text-decoration: inherit;
+    box-shadow: none;
+    cursor: pointer;
   }
 }
