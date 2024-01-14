@@ -7,6 +7,7 @@ import { Home } from 'pages/Home';
 import { Shops } from 'pages/Shops';
 import Development from 'pages/Presentation';
 import { Contacts } from 'pages/Contacts';
+import { SliderCH } from 'pages/SliderCH';
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
         <Route path="/" element={<Layoyt />}>
           <Route index element={<Home />} />
           <Route path="/presentation-CH" element={<Development />} />
+          <Route path="/slider-CH" element={<SliderCH />} />
           <Route path="/shops" element={<Shops />} />
           <Route path="/contacts" element={<Contacts />} />
         </Route>

@@ -6,8 +6,12 @@ import image2 from './img/slide2.png';
 export const Home = () => {
   return (
     <div className={css.container}>
-      <img className={css.img} src={image1} alt="img" />
-      <img className={css.img} src={image2} alt="img" />
+      <div className={css.containerImg}>
+        <img className={css.img} src={image1} alt="img" />
+      </div>
+      <div>
+        <img className={css.img} src={image2} alt="img" />
+      </div>
     </div>
   );
 }
