@@ -2,37 +2,59 @@ import React, { Children, cloneElement, useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import css from './Carousel.module.css';
 
-// const PAGE_WITH = `100%`
-export const Carousel = ({ children }) => {
-    
-    const [pages, setPages] = useState([]);
-    const handleLeftArrowClick = (() => {
-        console.log('handleLeftArrowClick');
-    })
-    const handleRightArrowClick = (() => {
-         console.log('handleLeftArrowClick');
-     });
+const PAGE_WIDTH = 450;
 
-    useEffect(() => {
-        setPages(
-            Children.map(children, child => {
-                return cloneElement(child, {
-                  style: {
-                    height: '100%',
-                    minWidth: '100%',
-                    maxWidth: '100%',
-                  },
-                });
-            })
-        )
-    },[])
+export const Carousel = ({ children }) => {
+  const [pages, setPages] = useState([]);
+  const [offset, setOffset] = useState(0);
+
+  const handleLeftArrowClick = () => {
+    // Обробник для кнопки "Вліво"
+    setOffset(currentOffset => {
+      const newOffset = currentOffset + PAGE_WIDTH;
+      console.log(newOffset);
+      return newOffset > 0 ? 0 : newOffset; // Обмеження, щоб не виходило за межі вліво
+    });
+  };
+
+  const handleRightArrowClick = () => {
+    // Обробник для кнопки "Вправо"
+    setOffset(currentOffset => {
+      const newOffset = currentOffset - PAGE_WIDTH;
+      console.log(newOffset);
+      return newOffset;
+    });
+  };
+
+  useEffect(() => {
+    setPages(
+      Children.map(children, child =>
+        cloneElement(child, {
+          style: {
+            height: '100%',
+            minWidth: `${PAGE_WIDTH}px`,
+            maxWidth: `${PAGE_WIDTH}px`,
+          },
+        })
+      )
+    );
+  }, [children]);
+
   return (
     <div className={css.mainContainer}>
       <FaChevronLeft className={css.arrow} onClick={handleLeftArrowClick} />
       <div className={css.window}>
-        <div className={css.allPagesContainer}>{pages}</div>
+        <div
+          className={css.allPagesContainer}
+          style={{
+            transform: `translateX(${offset}px)`,
+            display: 'flex',
+          }}
+        >
+          {pages}
+        </div>
       </div>
       <FaChevronRight className={css.arrow} onClick={handleRightArrowClick} />
     </div>
   );
-}
+};

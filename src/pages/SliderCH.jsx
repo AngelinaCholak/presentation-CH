@@ -12,16 +12,36 @@ export const SliderCH = () => {
       <div className={css.container}>
         <Carousel>
           <div className={`${css.item} ${css.item1}`}>
-            <img src={image1} alt={`Chehol`} width="650" height="650" />
+            <div>
+              <img src={image1} alt={`Chehol`} width="450" height="450" />
+            </div>
+            <div>
+              <p>fghnjmk,</p>
+            </div>
           </div>
-          <div className={css.item}>
-            <img src={image2} alt={`Chehol`} width="450" height="450" />
+          <div className={`${css.item} ${css.item1}`}>
+            <div>
+              <img src={image2} alt={`Chehol`} width="450" height="450" />
+            </div>
+            <div>
+              <p>fghnjmk,</p>
+            </div>
           </div>
-          <div className={css.item}>
-            <img src={image3} alt={`Chehol`} width="450" height="450" />
+          <div className={`${css.item} ${css.item1}`}>
+            <div>
+              <img src={image3} alt={`Chehol`} width="450" height="450" />
+            </div>
+            <div>
+              <p>fghnjmk,</p>
+            </div>
           </div>
-          <div className={css.item}>
-            <img src={image4} alt={`Chehol`} width="450" height="450" />
+          <div className={`${css.item} ${css.item1}`}>
+            <div>
+              <img src={image4} alt={`Chehol`} width="450" height="450" />
+            </div>
+            <div>
+              <p>fghnjmk,</p>
+            </div>
           </div>
         </Carousel>
       </div>

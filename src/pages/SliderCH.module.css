@@ -1,17 +1,16 @@
-.item{
-
- display: flex;
- justify-content: center;
- margin-top: 140px;
-
-}
-.item1{
-  /* margin-top: 140px; */
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.item1 {
+  /* можна залишити порожнім, якщо немає конкретних стилів для .item1 */
+}
 .container {
- max-width: 1000px; 
- margin: 0 auto;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140px;
 }
-

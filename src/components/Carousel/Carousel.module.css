@@ -1,36 +1,39 @@
-.mainContainer{
-    max-width: 100%;
+.mainContainer {
+   
     display: flex;
     align-items: center;
-
 }
-.window{
-    height: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    /* overflow: scroll; */
 
+.window {
+  height: 100%;
+  width: 450px;  
+  overflow: hidden;
 }
-.allPagesContainer{
-    height: 100%;
-    display: flex;
+.allPagesContainer {
+  height: 100%;
+  display: flex;
+  transition: transform 0.3s ease;
+}
 
-}
 .arrow {
   cursor: pointer;
-    width: 100px;
-    height: 2em;
-
+  width: 100px;
+  height: 2em;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 769px) {
   .mainContainer {
-    max-width: 100%; 
-    /* padding: 40px;  */
-    margin: 40px;
+    max-width: 100%;
+    margin: 10px;
   }
-  img{
-    width: 450px;
-    height: 450px;
+
+  .window {
+    overflow: hidden;
+  }
+
+  .item img {
+    width: 600px; /* Змініть ширину, якщо потрібно */
+    height: auto;
   }
   
 }
