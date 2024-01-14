@@ -8,10 +8,10 @@ import { Shops } from 'pages/Shops';
 import Development from 'pages/Presentation';
 import { Contacts } from 'pages/Contacts';
 import { SliderCH } from 'pages/SliderCH';
-
+import css from './index.module.css';
 export const App = () => {
   return (
-    <div>
+    <div className={css.container}>
       <TostBox />
       <Routes>
         <Route path="/" element={<Layoyt />}>

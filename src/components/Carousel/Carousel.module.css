@@ -25,15 +25,21 @@
   .mainContainer {
     max-width: 100%;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
   }
 
   .window {
     overflow: hidden;
+      /* width: 650px; 
+      height: 650px;  */
   }
 
-  .item img {
-    width: 600px; /* Змініть ширину, якщо потрібно */
-    height: auto;
+   img {
+    /* width: 650px; 
+      height: 650px;  */
   }
   
 }

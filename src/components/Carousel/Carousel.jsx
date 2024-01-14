@@ -13,15 +13,15 @@ export const Carousel = ({ children }) => {
     setOffset(currentOffset => {
       const newOffset = currentOffset + PAGE_WIDTH;
       console.log(newOffset);
-      return newOffset > 0 ? 0 : newOffset; // Обмеження, щоб не виходило за межі вліво
+      return Math.min(newOffset,0);
     });
   };
 
   const handleRightArrowClick = () => {
-    // Обробник для кнопки "Вправо"
     setOffset(currentOffset => {
-      const newOffset = currentOffset - PAGE_WIDTH;
-      console.log(newOffset);
+        const newOffset = currentOffset - PAGE_WIDTH;
+        const maxoffset = -(PAGE_WIDTH * (pages.length -1))
+      console.log(newOffset, maxoffset);
       return newOffset;
     });
   };
