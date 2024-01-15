@@ -1,15 +1,22 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+
 import css from './Layoyt.module.css';
 
 const Layoyt = () => {
-  //  const isMobile = window.innerWidth <= 768;
+  // const [burgerModalOpen, setBurgerModalOpen] = useState(false);
+
+  // const handleBurgerClick = isOpen => {
+  //   setBurgerModalOpen(isOpen);
+  // };
+
   return (
     <div className={css.filmsTrending}>
       <header className={css.container}>
+        {/* <BurgerModal handleBurgerClick={handleBurgerClick} /> */}
         <nav>
           <ul>
-            <li>
+            <li className={css.hideOnMobile}>
               <NavLink
                 className={({ isActive }) =>
                   isActive ? css.active : css.headerLink
@@ -19,35 +26,37 @@ const Layoyt = () => {
                 CH mobile
               </NavLink>
             </li>
-            <li>
+            <li className={css.hideOnMobile}>
               <NavLink
                 className={({ isActive }) =>
                   isActive ? css.active : css.headerLink
                 }
                 to="/presentation-CH"
               >
-                Development
+                Shops
               </NavLink>
+            </li>
+            <li className={css.hideOnMobile}>
               <NavLink
                 className={({ isActive }) =>
                   isActive ? css.active : css.headerLink
                 }
                 to="/slider-CH"
               >
-                slider-CH
+                Products
               </NavLink>
             </li>
-            {/* <li>
+            <li className={css.hideOnMobile}>
               <NavLink
                 className={({ isActive }) =>
                   isActive ? css.active : css.headerLink
                 }
-                to="/shops"
+                to="/Shops"
               >
-                Our Shops
+                Shops
               </NavLink>
-            </li> */}
-            <li>
+            </li>
+            <li className={css.hideOnMobile}>
               <NavLink
                 className={({ isActive }) =>
                   isActive
@@ -62,7 +71,9 @@ const Layoyt = () => {
           </ul>
         </nav>
       </header>
-      <main>
+      <main
+      // className={`${burgerModalOpen ? css.overlay : ''} ${css.mainContent}`}
+      >
         <Outlet />
       </main>
     </div>

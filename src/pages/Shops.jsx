@@ -1,9 +1,12 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { Vortex } from 'react-loader-spinner';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
+import { useSwipeable } from 'react-swipeable';
 import css from './Shops.module.css';
+
 import image1 from './img/img1.jpg';
 import image2 from './img/img2.jpg';
 import image3 from './img/img3.jpg';
@@ -22,108 +25,70 @@ import image15 from './img/img15.jpg';
 import image16 from './img/img16.jpg';
 import image17 from './img/img17.jpg';
 
-const PrevArrow = ({ onClick }) => (
-  <div className={css.prevArrow} onClick={onClick}>
-    &lt;
-  </div>
-);
+const images = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
+  image16,
+  image17,
+];
 
-const NextArrow = ({ onClick }) => (
-  <div className={css.nextArrow} onClick={onClick}>
-    &gt;
-  </div>
-);
+const Slider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-export const Shops = () => {
-  const [loading, setLoading] = useState(true);
-  // eslint-disable-next-line no-unused-vars
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    beforeChange: (current, next) => setCurrentSlide(next),
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+  const nextSlide = () => {
+    setCurrentIndex(prevIndex =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
   };
-  const images = useMemo(
-    () => [
-      image1,
-      image2,
-      image3,
-      image4,
-      image5,
-      image6,
-      image7,
-      image8,
-      image9,
-      image10,
-      image11,
-      image12,
-      image13,
-      image14,
-      image15,
-      image16,
-      image17,
-    ],
-    []
-  );
 
-  useEffect(() => {
-    const loadImage = () => {
-      const imagePromises = images.map(image => {
-        return new Promise(resolve => {
-          const img = new Image();
-          img.src = image;
-          img.onload = () => resolve();
-        });
-      });
+  const prevSlide = () => {
+    setCurrentIndex(prevIndex =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
 
-      Promise.all(imagePromises).then(() => {
-        setLoading(false);
-      });
-    };
-
-    loadImage();
-  }, [images]);
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+  });
 
   return (
-    <div className={css.container}>
-      <div className={css.sliderContainer}>
-        <div className={css.sliderContainerInner}>
-          {loading ? (
-            <div className={css.loaderContainer}>
-              <Vortex
-                visible={true}
-                height={80}
-                width={80}
-                ariaLabel="vortex-loading"
-                wrapperStyle={{}}
-                wrapperClass="vortex-wrapper"
-                colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
-              />
-            </div>
-          ) : (
-            <Slider {...settings} className={css.slider}>
-              {images.map((image, index) => (
-                <div key={index} className={css.sliderItem}>
-                  <img
-                    className={css.sliderImage}
-                    src={image}
-                    alt={`Chehol ${index}`}
-                  />
-                </div>
-              ))}
-            </Slider>
-          )}
+    <div {...handlers} className={css.sliderContainer}>
+      <div className={css.sliderContent}>
+        <div className={css.slideContainer}>
+          <img
+            src={images[currentIndex]}
+            alt={`Slide ${currentIndex + 1}`}
+            className={css.slide}
+            width="800"
+            height="600"
+          />
         </div>
       </div>
-      {/* <p>Current slide: {currentSlide + 1}</p> */}
+
+      <div className={css.buttonContainer}>
+        <button className={`${css.arrow} ${css.prev}`} onClick={prevSlide}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+        <button className={`${css.arrow} ${css.next}`} onClick={nextSlide}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+      </div>
     </div>
   );
 };
+
+export default Slider;

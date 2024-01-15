@@ -13,14 +13,14 @@ export const Carousel = ({ children }) => {
     setOffset(currentOffset => {
       const newOffset = currentOffset + PAGE_WIDTH;
       console.log(newOffset);
-      return Math.min(newOffset,0);
+      return Math.min(newOffset, 0);
     });
   };
 
   const handleRightArrowClick = () => {
     setOffset(currentOffset => {
-        const newOffset = currentOffset - PAGE_WIDTH;
-        const maxoffset = -(PAGE_WIDTH * (pages.length -1))
+      const newOffset = currentOffset - PAGE_WIDTH;
+      const maxoffset = -(PAGE_WIDTH * (pages.length - 1));
       console.log(newOffset, maxoffset);
       return newOffset;
     });
