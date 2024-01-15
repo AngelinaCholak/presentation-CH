@@ -37,7 +37,7 @@ const Layoyt = () => {
                 slider-CH
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 className={({ isActive }) =>
                   isActive ? css.active : css.headerLink
@@ -46,7 +46,7 @@ const Layoyt = () => {
               >
                 Our Shops
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 className={({ isActive }) =>
