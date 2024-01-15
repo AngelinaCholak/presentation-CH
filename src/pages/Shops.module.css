@@ -71,8 +71,8 @@ img {
 }
 @media screen and (max-width: 768px) {
   .slide {
-     max-width: 400px; 
-  max-height: 200px; 
+     max-width: 500px; 
+  max-height: 500px; 
    
   }
 
