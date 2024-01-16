@@ -1,7 +1,13 @@
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+ max-width: 1000px; 
+ margin: 0 auto;
+ padding: 20px;
+
+}
+.img{
+    width:100%;
+    margin-top: 140px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .title {
@@ -23,18 +29,18 @@ p, h2 {
 
 .img {
   max-width: 100%;
- 
+ text-align: center;
   transition: transform 0.3s ease-in-out;
 }
 
 .img:hover {
   transform: scale(1.1); 
 }
-.containerImg{
+/* .containerImg{
    margin-top: 140px;
    margin-bottom: 40px;
 
-}
+} */
 
 @media screen and (max-width: 768px) {
   .container {
