@@ -29,14 +29,16 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
 
 }
 
 .description {
-  font-size: 18px;
+  font-size: 19px;
   color: white;
+  text-align: center;
+  font-weight: bold;
 }
 
 .slide {
@@ -96,4 +98,5 @@ img {
     max-width: 360px;
     max-height: 360px;
   }
+
 }

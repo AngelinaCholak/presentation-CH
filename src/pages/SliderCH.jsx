@@ -71,7 +71,7 @@ const SliderCH = () => {
           />
           <div className={css.price}>
             <p className={css.description}>{currentImage.description}</p>
-            <p className={css.description}>{currentImage.price}</p>
+            <p className={css.description}>Price:{currentImage.price}</p>
           </div>
         </div>
       </div>
