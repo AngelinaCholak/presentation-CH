@@ -5,9 +5,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import Layoyt from './Layoyt/Layoyt';
 import { Home } from 'pages/Home';
 import { Contacts } from 'pages/Contacts';
-import { SliderCH } from 'pages/SliderCH';
+
 import css from './index.module.css';
 import Slider from 'pages/Shops';
+import SliderCH from 'pages/SliderCH';
 export const App = () => {
   return (
     <div className={css.container}>

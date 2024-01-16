@@ -25,18 +25,18 @@
 
 .captionContainer {
   text-align: center;
-  margin-top: 20px;
+
 }
 
 .title {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 10px;
+
 }
 
 .description {
   font-size: 18px;
-  color: #555;
+  color: white;
 }
 
 .slide {
@@ -56,7 +56,7 @@ img {
 
 .buttonContainer {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -88,10 +88,12 @@ img {
 .arrow:hover {
   color: #f87219;
 }
-
+.price {
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
   .slide {
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 360px;
+    max-height: 360px;
   }
 }

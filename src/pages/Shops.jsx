@@ -141,15 +141,17 @@ const Slider = () => {
         <div className={css.slideContainer}>
           <div className={css.captionContainer}>
             <h2 className={css.title}>{currentImage.title}</h2>
-            <p className={css.description}>{currentImage.description}</p>
           </div>
           <img
             src={currentImage.src}
             alt={currentImage.title}
             className={css.slide}
             width="800"
-            height="600"
+            height="500"
           />
+          <div className={css.captionContainer}>
+            <p className={css.description}>{currentImage.description}</p>
+          </div>
         </div>
       </div>
 
