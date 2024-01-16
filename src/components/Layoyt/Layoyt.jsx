@@ -31,7 +31,7 @@ const Layoyt = () => {
                 className={({ isActive }) =>
                   isActive ? css.active : css.headerLink
                 }
-                to="/OurShops"
+                to="/presentation-CH"
               >
                 Our Shops
               </NavLink>
