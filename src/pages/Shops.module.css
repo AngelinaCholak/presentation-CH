@@ -4,40 +4,55 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  margin-top: 140px;
-   transition: transform 0.3s ease; 
+  margin-top: 70px;
+  transition: transform 0.3s ease;
 }
 
 .sliderContent {
   position: relative;
   width: 80%;
   margin: 0 auto;
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .slideContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
+}
 
+.captionContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 18px;
+  color: #555;
 }
 
 .slide {
-
   object-fit: cover;
-  max-width: 800px; 
-  max-height: 600px; 
-   border: 6px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, #0b090a, #ff6600);
-}
-img {
-   border: 6px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, #0b090a, #ff6600);
+  max-width: 800px;
+  max-height: 600px;
+  border: 6px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #0b090a, #ff6600);
 }
 
+img {
+  border: 6px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #0b090a, #ff6600);
+}
 
 .buttonContainer {
   position: absolute;
@@ -59,7 +74,7 @@ img {
   padding: 10px;
   outline: none;
   pointer-events: all;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .prev {
@@ -73,26 +88,10 @@ img {
 .arrow:hover {
   color: #f87219;
 }
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.description {
-  font-size: 18px;
-  color: #555;
-}
-
-.captionContainer {
-  text-align: center;
-}
 
 @media screen and (max-width: 768px) {
   .slide {
-     max-width: 500px; 
-  max-height: 500px; 
-   
+    max-width: 500px;
+    max-height: 500px;
   }
-
 }
