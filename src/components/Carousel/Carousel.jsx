@@ -9,7 +9,7 @@ export const Carousel = ({ children }) => {
   const [offset, setOffset] = useState(0);
 
   const handleLeftArrowClick = () => {
-    // Обробник для кнопки "Вліво"
+ 
     setOffset(currentOffset => {
       const newOffset = currentOffset + PAGE_WIDTH;
       console.log(newOffset);

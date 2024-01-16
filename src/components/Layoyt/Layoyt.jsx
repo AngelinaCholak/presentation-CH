@@ -31,9 +31,9 @@ const Layoyt = () => {
                 className={({ isActive }) =>
                   isActive ? css.active : css.headerLink
                 }
-                to="/presentation-CH"
+                to="/OurShops"
               >
-                Shops
+                Our Shops
               </NavLink>
             </li>
             <li className={css.hideOnMobile}>
@@ -44,16 +44,6 @@ const Layoyt = () => {
                 to="/slider-CH"
               >
                 Products
-              </NavLink>
-            </li>
-            <li className={css.hideOnMobile}>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? css.active : css.headerLink
-                }
-                to="/Shops"
-              >
-                Shops
               </NavLink>
             </li>
             <li className={css.hideOnMobile}>

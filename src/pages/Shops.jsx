@@ -26,23 +26,91 @@ import image16 from './img/img16.jpg';
 import image17 from './img/img17.jpg';
 
 const images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10,
-  image11,
-  image12,
-  image13,
-  image14,
-  image15,
-  image16,
-  image17,
+  {
+    src: image1,
+    title: 'Заголовок 1',
+    description: 'Опис 1',
+  },
+  {
+    src: image2,
+    title: 'Заголовок 2',
+    description: 'Опис 2',
+  },
+  {
+    src: image3,
+    title: 'Заголовок 3',
+    description: 'Опис 3',
+  },
+  {
+    src: image4,
+    title: 'Заголовок 4',
+    description: 'Опис 4',
+  },
+  {
+    src: image5,
+    title: 'Заголовок 5',
+    description: 'Опис 5',
+  },
+  {
+    src: image6,
+    title: 'Заголовок 6',
+    description: 'Опис 6',
+  },
+  {
+    src: image7,
+    title: 'Заголовок 7',
+    description: 'Опис 7',
+  },
+  {
+    src: image8,
+    title: 'Заголовок 8',
+    description: 'Опис 8',
+  },
+  {
+    src: image9,
+    title: 'Заголовок 9',
+    description: 'Опис 9',
+  },
+  {
+    src: image10,
+    title: 'Заголовок 10',
+    description: 'Опис 10',
+  },
+  {
+    src: image11,
+    title: 'Заголовок 11',
+    description: 'Опис 11',
+  },
+  {
+    src: image12,
+    title: 'Заголовок 12',
+    description: 'Опис 12',
+  },
+  {
+    src: image13,
+    title: 'Заголовок 13',
+    description: 'Опис 13',
+  },
+  {
+    src: image14,
+    title: 'Заголовок 14',
+    description: 'Опис 14',
+  },
+  {
+    src: image15,
+    title: 'Заголовок 15',
+    description: 'Опис 15',
+  },
+  {
+    src: image16,
+    title: 'Заголовок 16',
+    description: 'Опис 16',
+  },
+  {
+    src: image17,
+    title: 'Заголовок 17',
+    description: 'Опис 17',
+  },
 ];
 
 const Slider = () => {
@@ -65,17 +133,23 @@ const Slider = () => {
     onSwipedRight: () => prevSlide(),
   });
 
+  const currentImage = images[currentIndex];
+
   return (
     <div {...handlers} className={css.sliderContainer}>
       <div className={css.sliderContent}>
         <div className={css.slideContainer}>
+          <h2 className={css.title}>{currentImage.title}</h2>
           <img
-            src={images[currentIndex]}
-            alt={`Slide ${currentIndex + 1}`}
+            src={currentImage.src}
+            alt={currentImage.title}
             className={css.slide}
             width="800"
             height="600"
           />
+          <div className={css.captionContainer}>
+            <p className={css.description}>{currentImage.description}</p>
+          </div>
         </div>
       </div>
 
