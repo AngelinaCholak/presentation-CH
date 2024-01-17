@@ -7,6 +7,7 @@ import {
 import { useSwipeable } from 'react-swipeable';
 import css from './Shops.module.css';
 
+
 import image1 from './img/Festival-ikia.jpeg';
 import image2 from './img/festival-lulu .jpeg';
 import image3 from './img/Festival-Plaza.jpeg';
@@ -205,7 +206,7 @@ const Slider = () => {
   const currentImage2 = images2[currentIndex2];
 
   return (
-    <div>
+    <div >
       <div>
         <div {...handlers1} className={css.sliderContainer}>
           <div className={css.sliderContent}>
