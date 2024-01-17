@@ -44,7 +44,7 @@
 
 .slide {
   object-fit: cover;
-  max-width: 800px;
+  max-width: 600px;
   max-height: 600px;
   border: 6px solid;
   border-image-slice: 1;
@@ -93,6 +93,35 @@ img {
 }
 .price {
   width: 100%;
+}
+.sectionContainer {
+  background: linear-gradient(to right, rgba(210, 83, 230, 0.9), rgba(146, 30, 170, 0.9), rgba(25, 0, 29, 0.9));
+  width: 100%;
+  justify-content: space-between;
+  border-top: 6px solid #0b090a; /* Border on the top */
+  border-bottom: 6px solid #f87219; /* Border on the bottom */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the content behind the element */
+}
+
+
+
+
+
+
+
+.block {
+    color: #ff6600;
+    font-size: 60px;
+    font-weight: 600;
+    word-wrap: break-word;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+
+}
+
+.centerBlock {
+
 }
 
 @media screen and (max-width: 768px) {
