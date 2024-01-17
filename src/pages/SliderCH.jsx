@@ -68,6 +68,7 @@ const SliderCH = () => {
             className={css.slide}
             width="800"
             height="500"
+            loading="lazy"
           />
           <div className={css.price}>
             <p className={css.description}>{currentImage.description}</p>

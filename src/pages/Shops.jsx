@@ -148,6 +148,7 @@ const Slider = () => {
             className={css.slide}
             width="800"
             height="500"
+            loading="lazy"
           />
           <div className={css.captionContainer}>
             <p className={css.description}>{currentImage.description}</p>

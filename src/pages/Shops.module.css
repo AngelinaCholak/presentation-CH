@@ -31,8 +31,9 @@
 .title {
   font-size: 26px;
   font-weight: bold;
-  transition: font-size 0.3s ease-in-out; /* Додано анімацію для font-size */
+
 }
+
 
 .description {
   font-size: 19px;
@@ -93,6 +94,7 @@ img {
 .price {
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   .slide {
     max-width: 360px;
