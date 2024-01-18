@@ -15,7 +15,7 @@ export const Home = () => {
       </div>
       <h1 className={css.title}>Development</h1>
       <h2>Today, we work with such small and large companies as:</h2>
-      <p>
+      <p >
         • Novus (UA) <br />• Megamarket (UA) <br />• Ultramarket (UA) <br />•
         Respublika Park (UA) <br />• Gorodok Shopping Center (UA) <br />• Tochka
         Shopping Center (UA) <br />• Ocean Plaza (UA) <br />• Silpo (UA) <br />•
