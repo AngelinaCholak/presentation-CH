@@ -7,7 +7,6 @@ import {
 import { useSwipeable } from 'react-swipeable';
 import css from './Shops.module.css';
 
-
 import image1 from './img/Festival-ikia.jpeg';
 import image2 from './img/festival-lulu .jpeg';
 import image3 from './img/Festival-Plaza.jpeg';
@@ -206,7 +205,42 @@ const Slider = () => {
   const currentImage2 = images2[currentIndex2];
 
   return (
-    <div >
+    <div>
+      <div>
+        {/* <div className={css.sectionContainer}>
+          <p className={css.block}>Concept</p>
+        </div> */}
+        <div {...handlers2} className={css.sliderContainer}>
+          <div className={css.sliderContent}>
+            <div className={css.slideContainer}>
+              <div className={css.sectionContainer}>
+                <h2 className={css.block}>Concept</h2>
+              </div>
+              <img
+                src={currentImage2.src}
+                alt={currentImage2.title}
+                className={css.slide}
+                width="800"
+                height="500"
+                loading="lazy"
+              />
+              {/* <div className={css.captionContainer}>
+              <p className={css.description}>{currentImage.description}</p>
+            </div> */}
+            </div>
+          </div>
+
+          <div className={css.buttonContainer}>
+            <button className={`${css.arrow} ${css.prev}`} onClick={prevSlide2}>
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+            <button className={`${css.arrow} ${css.next}`} onClick={nextSlide2}>
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div>
         <div {...handlers1} className={css.sliderContainer}>
           <div className={css.sliderContent}>
@@ -233,42 +267,6 @@ const Slider = () => {
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
             <button className={`${css.arrow} ${css.next}`} onClick={nextSlide1}>
-              <FontAwesomeIcon icon={faChevronRight} />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className={css.sectionContainer}>
-        <p className={css.block}>Concept</p>
-      </div>
-
-      <div>
-        <div {...handlers2} className={css.sliderContainer}>
-          <div className={css.sliderContent}>
-            <div className={css.slideContainer}>
-              {/* <div className={css.captionContainer}>
-              <h2 className={css.title}>{currentImage.title}</h2>
-            </div> */}
-              <img
-                src={currentImage2.src}
-                alt={currentImage2.title}
-                className={css.slide}
-                width="800"
-                height="500"
-                loading="lazy"
-              />
-              {/* <div className={css.captionContainer}>
-              <p className={css.description}>{currentImage.description}</p>
-            </div> */}
-            </div>
-          </div>
-
-          <div className={css.buttonContainer}>
-            <button className={`${css.arrow} ${css.prev}`} onClick={prevSlide2}>
-              <FontAwesomeIcon icon={faChevronLeft} />
-            </button>
-            <button className={`${css.arrow} ${css.next}`} onClick={nextSlide2}>
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
           </div>
